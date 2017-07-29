@@ -13,3 +13,9 @@
 ## 第五步 然后提交到master 分支
 	git commit 
 	 在vi 编辑器中按 i 插入内容，然后ESC ，再输入":wq"就可以退出并保存
+## 其他常用 git 命令 
+	git status 查看当前目录里面文件的状态
+	git log 查看提交日志
+	git mv 修改添加到版本库文件的名称   eg： git mv my.js main.js 
+	mv linux 系统中mv 不同的是，git mv 不能修改 未添加到版本库里的文件
+	git rm 删除 已经添加到版本库里面的文件
