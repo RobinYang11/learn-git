@@ -19,3 +19,20 @@
 	git mv 修改添加到版本库文件的名称   eg： git mv my.js main.js 
 	mv linux 系统中mv 不同的是，git mv 不能修改 未添加到版本库里的文件
 	git rm 删除 已经添加到版本库里面的文件
+
+##　Git reset 　
+
+### 作用—————— 1.文件从暂存区回退到工作区 2. 版本回退 　　　　
+* git reset HEAD filename ：回退文件，将文件从暂存区回退到工作区 　//也可以使用 git reset filename
+* git reset HEAD^ ：回退版本，一个^表示一个版本，可以多个，另外也可以使用 git reset HEAD～n这种形式。
+- （1） soft 参数：git reset --soft HEAD～1 意为将版本库软回退1个版本，所谓软回退表示将本地版本库的头指针全部重置到指定版本，且将这次提交之后的所有 - 变更都移动到暂存区
+-	（2） 默认的mixed参数：git reset HEAD～1 意为将版本库回退1个版本，将本地版本库的头指针全部重置到指定版本，且会重置暂存区，即这次提交之后的所有变更都移动到未暂存阶段
+-	（3） hard参数：git reset --hard HEAD～1 意为将版本库回退1个版本，但是不仅仅是将本地版本库的头指针全部重置到指定版本，也会重置暂存区，并且会将工作区代码也回退到这个版本    
+## git branch 分支
+- git branch 查看当前分支
+- git branch robin 创建robin分支
+- git checkout robin 切换到robin 分支
+## git merge 合并分支
+- git merge dev  将dev 分支合并到当前分支，当前分支一般是master 分支
+- git diff 分支1..分支2  比较分支1 和分支2 的不同
+	 
