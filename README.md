@@ -35,4 +35,15 @@
 ## git merge 合并分支
 - git merge dev  将dev 分支合并到当前分支，当前分支一般是master 分支
 - git diff 分支1..分支2  比较分支1 和分支2 的不同
+## 如何把本地库和github上面的仓库管理起来
+- git remote add origin <gitHub仓库url> 一定要记着如果github上面的仓库里面有readme.md，要执行如下命令
+	 git pull --rebase origin master 如果没有，则在创建本地库的时候要创建一个readme.md ，然后git add ，再git commit 到临时版本库里面。
+# 特别重要的提示，在第一使用github是要配置github 权限
+- 1.ssh-keygen -t rsa -C "your@email.com"
+- 2.接着出现：
+	Generating public/private rsa key pair.
+	Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):
+	 接着回车
+	 然后系统会自动在你点到的administrator文件夹下的.ssh文件夹下生成两个文件，id_rsa和id_rsa.pub，用记事本打开id_rsa.pub
+	 复制里面的的内容到你的github ssh帐号管理里面添加这个sshkey就可以了。
 	 
